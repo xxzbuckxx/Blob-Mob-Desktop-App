@@ -1,0 +1,22 @@
+{
+  "name": "blob-mob-desktop-app",
+  "version": "1.0.0",
+  "description": "Blob mob packaged for windows",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xxzbuckxx/Blob-Mob-Desktop-App.git"
+  },
+  "author": "Zack Traczyk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xxzbuckxx/Blob-Mob-Desktop-App/issues"
+  },
+  "homepage": "https://github.com/xxzbuckxx/Blob-Mob-Desktop-App#readme",
+  "dependencies": {
+    "electron": "^1.8.2"
+  }
+}
