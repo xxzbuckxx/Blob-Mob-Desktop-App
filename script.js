@@ -46,6 +46,7 @@ var randomColor = '#ffd6cc'; //Set so player doesnt strobe
 var background = new Image();
 background.src = 'http://www.photos-public-domain.com/wp-content/uploads/2011/02/crumpled-notebook-paper-texture.jpg'; //NOT IN USE
 
+//--------------Howler Sound--------------//
 //Howler Sound
 var titleTheme = new Howl({
     src: ['Sound/Good-portion-of-distortion.mp3'],
@@ -82,7 +83,6 @@ var effects = new Howl({
 });
 
 var muted = false;
-var monce = true;
 var mSound = 0.5;
 var eSound = 1;
 var at; //Attack id
@@ -115,7 +115,11 @@ function muteSound(){
     effects.volume(eSound);
 }
 
+function muteClick(){
+    monce = true;
+}
 
+//-------------------------------------//
 //--------------FUNCTIONS--------------//
 //Mouse Tracker
 function getPosition(event) {

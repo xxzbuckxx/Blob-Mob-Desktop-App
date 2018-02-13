@@ -1,6 +1,7 @@
 const electron = require('electron');
 const url = require('url');
 const path = require('path');
+var monce;
 
 const {app, BrowserWindow, Menu} = electron;
 
@@ -9,7 +10,7 @@ let mainWindow;
 //Listen for app to be ready
 app.on('ready', function(){
     //Create new window
-    mainWindow = new BrowserWindow({width: 900, height: 800, title: 'Blob Mob'});
+    mainWindow = new BrowserWindow({width: 900, height: 800, title: 'Blob Mob', icon: 'favicon.ico'});
     //Load html into window
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'index.html'),
@@ -29,7 +30,11 @@ const mainMenuTemplate = [
         label:'options',
         submenu: [
             {
-                label: 'Mute'
+                label: 'Mute'//,
+                //accelerator: process.platform == 'darwin' ? 'Command+M' : 'Ctrl+M',
+                //click:() => {
+                    //monce = true;
+                //}
             },
             {
                 label: 'Mute music'
@@ -43,7 +48,7 @@ const mainMenuTemplate = [
             {
                 label: 'Quit',
                 accelerator: process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q',
-                click(){
+                click: () => {
                     app.quit();
                 }
             }
