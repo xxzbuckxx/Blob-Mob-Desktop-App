@@ -30,11 +30,11 @@ const mainMenuTemplate = [
         label:'options',
         submenu: [
             {
-                label: 'Mute'//,
-                //accelerator: process.platform == 'darwin' ? 'Command+M' : 'Ctrl+M',
-                //click:() => {
-                    //monce = true;
-                //}
+                label: 'Mute',
+                accelerator: process.platform == 'darwin' ? 'Command+M' : 'Ctrl+M',
+                click(){ // Doesn't work for who knows why
+                    monce = true;
+                }
             },
             {
                 label: 'Mute music'
@@ -47,8 +47,8 @@ const mainMenuTemplate = [
             },
             {
                 label: 'Quit',
-                accelerator: process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q',
-                click: () => {
+                accelerator: process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q', //Doesn't work with blob mob code
+                click(){
                     app.quit();
                 }
             }
