@@ -27,27 +27,10 @@ app.on('ready', function(){
 //Create menu template
 const mainMenuTemplate = [
     {
-        label:'options',
+        label: 'file',
         submenu: [
             {
-                label: 'Mute',
-                accelerator: process.platform == 'darwin' ? 'Command+M' : 'Ctrl+M',
-                click(){ // Doesn't work for who knows why
-                    monce = true;
-                }
-            },
-            {
-                label: 'Mute music'
-            },
-            {
-                label: 'Mute effects'
-            },
-            {
-                label: 'Pause'
-            },
-            {
                 label: 'Quit',
-                accelerator: process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q', //Doesn't work with blob mob code
                 click(){
                     app.quit();
                 }
